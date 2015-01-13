@@ -1,6 +1,8 @@
 __author__ = 'marc'
-
+from datetime import datetime as dt
 from django.db import models
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 Entree_categories = (
     (u'99','-'),
     (u'American',u'American'),
@@ -46,3 +48,24 @@ class Menu(models.Model):
 
     class Meta:
         ordering = ('name',)
+
+
+@receiver(pre_save, sender=Entree)
+def entree_pre_save_handler(sender, **kwargs):
+    """
+    change update date
+    :param sender:
+    :param kwargs:
+    :return:
+    """
+    kwargs['instance'].updated_at = dt.now()
+
+@receiver(pre_save, sender=Menu)
+def menu_pre_save_handler(sender, **kwargs):
+    """
+    change update date
+    :param sender:
+    :param kwargs:
+    :return:
+    """
+    kwargs['instance'].updated_at = dt.now()
