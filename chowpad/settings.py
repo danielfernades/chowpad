@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_nose',
     'django_extensions',
-    'cart',
+    'chowcart',
     'menu'
 )
 
@@ -92,3 +92,4 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     '%s/templates' % BASE_DIR,
 )
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
