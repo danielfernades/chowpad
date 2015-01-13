@@ -16,6 +16,9 @@ class SimpleTest(TestCase):
         apps = [
             'menu',
             'menu.models',
+            'menu.management',
+            # 'menu.management.rebuild_starter_db' # FIXME
         ]
         for a in apps:
+            print a
             self.assertTrue(module_exists(a))

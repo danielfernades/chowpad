@@ -16,8 +16,10 @@ class SimpleTest(TestCase):
         apps = [
             'chowpad',
             'chowpad.settings',
+            #'chowpad.test_settings',
             #'chowpad.urls',  FIXME: should pass
             #'chowpad.wsgi',
         ]
         for a in apps:
+            print a
             self.assertTrue(module_exists(a))
