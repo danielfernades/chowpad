@@ -1,0 +1,15 @@
+<tr>
+    <td><input name="name-{{ i.index }}" readonly value="{{ i.name }}"></td>
+    <td><input name="quantity-{{ i.index }}" readonly value="{{ i.quantity }}"></td>
+    <td><input name="price-{{ i.index }}" readonly value="{{ i.price }}"></td>
+    <td>
+    {% for j in i.sides %}
+        <input type="radio" name="sides-{{ i.index }}-{{ i.name }}" value="{{ j }}"> {{ j }}<br>
+    {% endfor %}
+    </td>
+    <td>
+    {% for j in i.configs %}
+        <input type="radio" name="configs-{{ i.index }}-{{ i.name }}" value="{{ j }}"> {{ j }}<br>
+    {% endfor %}
+    </td>
+</tr>

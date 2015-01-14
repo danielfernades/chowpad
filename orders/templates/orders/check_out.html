@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>Select Sides and Configurations</h1>
+
+    <form action="{% url 'place_order' %}">
+        <table BORDER=10>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Sides</th>
+                <th>Configurations</th>
+            </tr>
+            {% for i in order_items %}
+                {% include "orders/_checkout_form.html" %}
+            {% endfor %}
+        </table>
+        <input type="submit" value="Place Order">
+    </form>
+    <a href="{% url 'select_table' menu_name=menu_name table_name=table_name %}">Back to Menu</a>
+{% endblock %}
