@@ -11,9 +11,12 @@ from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
+from django.views.generic import ListView
 from orders.models import Order
 
 
+class OrderListView(ListView):
+    pass
 def place_order(request):
 
     item_count = 0
