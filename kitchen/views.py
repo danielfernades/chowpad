@@ -16,7 +16,12 @@ from orders.models import Order
 
 
 class OrderListView(ListView):
-    pass
+
+    model = Order
+
+    template_name = 'kitchen/order_list.html'
+    def get_queryset(self):
+        return Order.objects.filter(status="Cooking").order_by('updated_at')
 def place_order(request):
 
     item_count = 0
