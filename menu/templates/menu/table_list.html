@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block body %}
     <h1>Select Table for Menu: {{ menu_name }}</h1>
-    {% for object in objects %}
-        {{ object.name }}
-    {% endfor %}
+
+    <ul>
+        {% for object in objects %}
+            <li><a href="{% url 'select_table' menu_name=menu_name table_name=object.name %}">{{ object.name }}</a></li>
+
+        {% endfor %}
+    </ul>
 {% endblock %}

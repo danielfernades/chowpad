@@ -30,7 +30,7 @@ def select_table(request, menu_name, table_name):
     menu = Menu.objects.filter(name=menu_name)
     return render(request, 'orders/menu_cart.html',
         {
-            'menu': menu[0],
+            'menu_name': menu[0].name,
             'entrees': menu[0].entrees.all(),
             'menu_name': menu_name,
             'table_name': table_name,
