@@ -21,11 +21,10 @@ def add_to_cart(request, menu_name, table_name, entree_id):
         for e in cart:
             if e.product.name==product.name:
                 quantity = e.quantity + 1
-                price = e.product.price
             break
         # cart update not working
         cart.remove(product)
-        cart.add(product, price, quantity)
+        cart.add(product, product.price, quantity)
     return HttpResponseRedirect(reverse('select_table', kwargs={'menu_name': menu_name,
                                                              'table_name': table_name }))
 

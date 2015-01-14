@@ -1,6 +1,16 @@
 # chowpad
 Simple Restaurant CRM/CMS
 
+URLS
+====
+For ordering:
+
+https://fogtest.com/chowpad/
+
+For the kitchen monitoring orders
+
+https://fogtest.com/chowpad/kitchen/orders-cooking/
+
 Starting App
 ============
   source ~/envs/chowpad/bin/activate

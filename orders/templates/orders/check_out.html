@@ -5,6 +5,7 @@
 
     <form action="{% url 'place_order' %}" method="POST">{% csrf_token %}
         <input name="table-name" readonly value="{{ table_name }}" TYPE=HIDDEN>
+        <input name="menu-name" readonly value="{{ menu_name }}" TYPE=HIDDEN>
         <table BORDER=10>
             <tr>
                 <th>Name</th>

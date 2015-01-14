@@ -38,6 +38,7 @@ def place_order(request):
     sides = []
     configs = []
     table_name = request.POST['table-name']
+    menu_name = request.POST['menu-name']
 
 
     # get sides from post
@@ -94,4 +95,6 @@ def place_order(request):
 
         order.save()
         j += 1
-    pass
+
+    return HttpResponseRedirect(reverse('select_table', kwargs={'menu_name': menu_name,
+                                                             'table_name': table_name }))
