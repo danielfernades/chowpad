@@ -15,6 +15,8 @@ class SimpleTest(TestCase):
         """
         apps = [
             'menu',
+            'menu.urls',
+            'menu.views',
             'menu.models',
             'menu.management',
             # 'menu.management.rebuild_starter_db' # FIXME

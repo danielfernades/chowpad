@@ -115,6 +115,6 @@ class SimpleTest(TestCase):
         self.assertEqual(now.year, dinner_menu.updated_at.year)
         self.assertEqual(now.month, dinner_menu.updated_at.month)
         self.assertEqual(now.day, dinner_menu.updated_at.day)
-        
+
         Entree.objects.all().delete()
         Menu.objects.all().delete()

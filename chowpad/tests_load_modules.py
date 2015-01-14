@@ -17,7 +17,7 @@ class SimpleTest(TestCase):
             'chowpad',
             'chowpad.settings',
             #'chowpad.test_settings',
-            #'chowpad.urls',  FIXME: should pass
+            #'chowpad.urls',  #FIXME: should pass
             #'chowpad.wsgi',
         ]
         for a in apps:
