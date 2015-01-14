@@ -2,7 +2,6 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from django.conf import settings
-from chowcart.views import get_cart
 from menu.views import MenuListView
 urlpatterns = patterns('',
 
