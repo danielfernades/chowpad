@@ -4,6 +4,7 @@
     <h1>Select Sides and Configurations</h1>
 
     <form action="{% url 'place_order' %}" method="POST">{% csrf_token %}
+        <input name="table-name" readonly value="{{ table_name }}" TYPE=HIDDEN>
         <table BORDER=10>
             <tr>
                 <th>Name</th>
