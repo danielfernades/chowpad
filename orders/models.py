@@ -37,12 +37,12 @@ class Order(models.Model):
     configurations = models.TextField(max_length = 100, null=True, blank=True)
 
     created_at = models.DateField(null=True)
-    updated_at = models.DateField(null=True)
+    updated_at = models.DateTimeField(null=True)
     def __str__(self):              # __unicode__ on Python 2
         return '%s'%(self.entree.name)
 
     class Meta:
-        ordering = ('-updated_at',)
+        ordering = ('updated_at',)
 
 
 

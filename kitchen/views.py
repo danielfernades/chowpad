@@ -14,7 +14,9 @@ from django.core.urlresolvers import reverse
 from django.views.generic import ListView
 from orders.models import Order
 
-
+def put_up(request, id):
+    Order.objects.get(pk=id).delete()
+    return HttpResponseRedirect(reverse('orders'))
 class OrderListView(ListView):
 
     model = Order

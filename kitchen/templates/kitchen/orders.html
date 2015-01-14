@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% block body %}
+
+    <script src="///ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <h1>Orders</h1>
 
    <div id="orders"></div>
+    <script>
+    var refresh_url = "{% url 'orders_service' %}";
+    </script>
+
+    <script src="{{ STATIC_URL }}kitchen/js/orders.js"></script>
 {% endblock %}
