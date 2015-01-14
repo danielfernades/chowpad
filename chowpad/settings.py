@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django_nose',
     'django_extensions',
     'chowcart',
-    'menu'
+    'menu',
+    'orders',
 )
 
 MIDDLEWARE_CLASSES = (

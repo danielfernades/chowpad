@@ -7,7 +7,7 @@ from chowpad import test_settings
 
 from menu.models import Entree
 from menu.models import Menu
-
+from orders.models import Otable
 class Command(BaseCommand):
     args = ''
     help = ''
@@ -20,6 +20,7 @@ class Command(BaseCommand):
         """
         Entree.objects.all().delete()
         Menu.objects.all().delete()
+        Otable.objects.all().delete()
         # Load Entrees
         for e in test_settings.ENTREES:
             new_entree = Entree()
@@ -30,9 +31,16 @@ class Command(BaseCommand):
             new_entree.price = e[4]
             new_entree.save()
         entrees = Entree.objects.all()
+        # load menus assign entries
         for m in test_settings.MENUS:
             new_menu = Menu()
             new_menu.name = m[0]
             new_menu.save()
             for e in m[1]:
                 new_menu.entrees.add(entrees[e])
+
+        # load tables
+        for t in test_settings.TABLES:
+            new_table = Otable()
+            new_table.name = t
+            new_table.save()

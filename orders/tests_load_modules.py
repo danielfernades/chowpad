@@ -14,13 +14,8 @@ class SimpleTest(TestCase):
         Ensure modules are importable.
         """
         apps = [
-            'menu',
-            #'menu.urls', # FIXME
-            #'menu.views',
-            'menu.models',
-            'menu.management',
-            # 'menu.management.rebuild_starter_db' # FIXME
+            'orders',
+            'orders.models',
         ]
         for a in apps:
-            print a
             self.assertTrue(module_exists(a))

@@ -20,6 +20,7 @@ MENUS = [
     ],
 ]
 
+TABLES = ['1', '2', '3', '4']
 """
 
     ['breakfest',
