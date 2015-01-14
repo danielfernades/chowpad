@@ -15,11 +15,11 @@ Ordering Page
 =============
 
 On this page - https://fogtest.com/chowpad/ , you place orders in 5 steps
-# Select Menu (Breakfest, Lunch, Dinner)
-# Select Table (1, 2, 3)
-# Select Entrees and Entree Counts
-# Select Sides and Configurations
-# Place Order
+* Select Menu (Breakfest, Lunch, Dinner)
+* Select Table (1, 2, 3)
+* Select Entrees and Entree Counts
+* Select Sides and Configurations
+* Place Order
 
 Kitchen Order Fulfillment Page
 ==============================
