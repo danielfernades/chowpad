@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Select Sides and Configurations</h1>
 
-    <form action="{% url 'place_order' %}">
+    <form action="{% url 'place_order' %}" method="POST">{% csrf_token %}
         <table BORDER=10>
             <tr>
                 <th>Name</th>

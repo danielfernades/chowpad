@@ -68,10 +68,6 @@ def check_out(request, menu_name, table_name):
         {
             'menu_name': menu_name,
             'table_name': table_name,
-            'cart': cart,
             'order_items': order_items,
         },
         context_instance=RequestContext(request))
-
-def place_order(request):
-    pass
