@@ -11,5 +11,3 @@ def remove_from_cart(request, product_id):
     cart = Cart(request)
     cart.remove(product)
 
-def get_cart(request):
-    return render_to_response('cart/cart.html', dict(cart=Cart(request)))

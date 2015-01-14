@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
 {% block body %}
+    <h1>Select Table for Menu: {{ menu_name }}</h1>
     {% for object in objects %}
         {{ object.name }}
     {% endfor %}
